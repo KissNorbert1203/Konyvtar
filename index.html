@@ -7,6 +7,29 @@
     <title>Könyvtár</title>
 </head>
 <body>
+    <input id="cim" type="text" placeholder="Könyv címe">
+    <input id="szerzo" type="text" placeholder="Szerző">
+    <input id="kiadasiEv" type="number" placeholder="Kiadási év">
+    <input id="oldalszam" type="number" placeholder="Oldalszám"><br><br>
+    <button onclick="konyvHozzaadasa()">Könyv hozzáadása</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cím</th>
+                <th>Szerző</th>
+                <th>Kiadási év</th>
+                <th>Oldalszám</th>
+                <th>Állapot</th>
+            </tr>
+        </thead>
+        <tbody id="konyvek-listaja"></tbody>
+    </table>
+    <button onclick="osszesKonyvMegjelenitese()">Összes könyv</button>
+    <button onclick="szabadKonyvekMegjelenitese()">Szabad könyvek</button>
+    <button onclick="legregebbiKonyvMegjelenitese()">Legrégebbi könyv</button>
+    <p id="legregebbi-konyv"></p>
+
     <script src="main.js"></script>
 </body>
 </html>
