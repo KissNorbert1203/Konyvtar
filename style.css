@@ -24,7 +24,7 @@ button {
     border: none;
     border-radius: 8px;
     color: white;
-    background: rgb(77, 77, 107);
+    background: rgb(93, 93, 255);
     font: inherit;
     cursor: pointer;
     margin-right: 10px;
@@ -40,7 +40,7 @@ input {
 
 input:focus {
     outline: none;
-    border-color: var(--kek-vilagos);
+    border-color: rgb(74, 74, 192);
     box-shadow: 0 0 0 3px rgba(74, 144, 217, .25);
 }
 
@@ -51,4 +51,38 @@ th, td {
 
 thead th {
     font-weight: 600;
+}
+
+#ujKonyv {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#konyvek {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+select {
+    padding: 9px 10px;
+    border: 1px solid #b8c0cc;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+    transition: border-color .15s, box-shadow .15s;
+    margin-bottom: 10px;
+}
+select:focus {
+    outline: none;
+    border-color: rgb(74, 74, 192);
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, .25);
 }

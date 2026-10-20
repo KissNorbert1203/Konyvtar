@@ -7,29 +7,51 @@
     <title>Könyvtár</title>
 </head>
 <body>
-    <input id="cim" type="text" placeholder="Könyv címe">
-    <input id="szerzo" type="text" placeholder="Szerző">
-    <input id="kiadasiEv" type="number" placeholder="Kiadási év">
-    <input id="oldalszam" type="number" placeholder="Oldalszám"><br><br>
-    <button onclick="konyvHozzaadasa()">Könyv hozzáadása</button>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Cím</th>
-                <th>Szerző</th>
-                <th>Kiadási év</th>
-                <th>Oldalszám</th>
-                <th>Állapot</th>
-            </tr>
-        </thead>
-        <tbody id="konyvek-listaja"></tbody>
-    </table>
-    <button onclick="osszesKonyvMegjelenitese()">Összes könyv</button>
-    <button onclick="szabadKonyvekMegjelenitese()">Szabad könyvek</button>
-    <button onclick="legregebbiKonyvMegjelenitese()">Legrégebbi könyv</button>
-    <p id="legregebbi-konyv"></p>
-
+    <h1>Könyvtár</h1>
+    <div id="ujKonyv">
+        <h3>Új könyv hozzáadása:</h3>
+        <input id="cim" type="text" placeholder="Könyv címe">
+        <input id="szerzo" type="text" placeholder="Szerző">
+        <input id="kiadasiEv" type="number" placeholder="Kiadási év">
+        <input id="oldalszam" type="number" placeholder="Oldalszám">
+        <input id="kategoria" type="text" placeholder="Kategória">
+        <br><br>
+        <button onclick="konyvHozzaadasa()">Könyv hozzáadása</button>
+    </div>
+    
+    <div id="konyvek">
+        <label>Kategória szűrése:</label>
+        <select id="kategoria-szuro" onchange="konyvekMegjelenitese()">
+            <option value="">Összes kategória</option>
+        </select>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cím</th>
+                    <th>Szerző</th>
+                    <th>Kiadási év</th>
+                    <th>Oldalszám</th>
+                    <th>Kategória</th>
+                    <th>Állapot</th>
+                    <th>Lehetőségek</th>
+                </tr>
+            </thead>
+            <tbody id="konyvek-listaja"></tbody>
+        </table>
+        <button onclick="osszesKonyvMegjelenitese()">Összes könyv</button>
+        <button onclick="szabadKonyvekMegjelenitese()">Szabad könyvek</button>
+        <button onclick="legregebbiKonyvMegjelenitese()">Legrégebbi könyv</button>
+        <button onclick="legVastagabbKonyvMegjelenitese()">Legvastagabb könyv</button>
+        <button onclick="AtlagosOldalszamMegjelenitese()">Átlagos oldalszám</button>
+            <p id="legregebbi-konyvFelirat"></p>
+            <p id="legregebbi-konyv"></p>
+        <br>
+            <p id="legvastagabb-konyvFelirat"></p>
+            <p id="legvastagabb-konyv"></p>
+        <br>
+        <p id="atlagos-oldalszam"></p>
+        
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
