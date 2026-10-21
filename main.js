@@ -54,7 +54,7 @@ function konyvekMegjelenitese(){
         return konyv.kategoria
     }))].sort()
 
-    kategoriaSzuro.innerHTML = "<option value=\"\">Összes kategória</option>"
+    kategoriaSzuro.innerHTML = '<option value="">Összes kategória</option>'
     kategoriak.forEach(function(kategoria){
         const opcio = document.createElement("option")
         opcio.value = kategoria
